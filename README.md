@@ -1,6 +1,5 @@
-# reignite_social
+# Reignite Mobile 
 
-A new Flutter project.
 
 ## Getting Started
 
