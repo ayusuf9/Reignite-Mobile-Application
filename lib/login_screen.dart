@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:reignite_social/main.dart';
+import 'home_section.dart';
 
-class LogInScreen extends StatelessWidget{
+class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xfffff6ef),
         body: Container(
@@ -55,16 +57,15 @@ class LogInScreen extends StatelessWidget{
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
-                                    borderSide: BorderSide(color: Color(0xffd9d9d9))
-                                ),
+                                    borderSide:
+                                        BorderSide(color: Color(0xffd9d9d9))),
                                 labelText: 'Email',
                                 hintText: 'Enter Your Email',
                                 filled: true,
                                 fillColor: Colors.white,
                               ),
                             ),
-                          )
-                      ),
+                          )),
                       Padding(
                           padding: EdgeInsets.fromLTRB(20.0, 10, 20.0, 0),
                           child: SizedBox(
@@ -79,8 +80,8 @@ class LogInScreen extends StatelessWidget{
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
-                                    borderSide: BorderSide(color: Color(0xffd9d9d9))
-                                ),
+                                    borderSide:
+                                        BorderSide(color: Color(0xffd9d9d9))),
                                 labelText: 'Password',
                                 hintText: 'Enter Password',
                                 filled: true,
@@ -93,18 +94,18 @@ class LogInScreen extends StatelessWidget{
                                 ),
                               ),
                             ),
-                          )
-                      )
+                          ))
                     ],
-                  )
-              ),
+                  )),
               Padding(
                   padding: EdgeInsets.only(left: 150),
                   child: SizedBox(
                       width: 117,
                       height: 30,
                       child: GestureDetector(
-                        onTap: () {print("Forgot Password Pressed");},
+                        onTap: () {
+                          print("Forgot Password Pressed");
+                        },
                         child: Text(
                           "Forgot Password?",
                           textAlign: TextAlign.right,
@@ -114,9 +115,7 @@ class LogInScreen extends StatelessWidget{
                             decoration: TextDecoration.underline,
                           ),
                         ),
-                      )
-                  )
-              ),
+                      ))),
               SizedBox(height: 20),
               Center(
                 child: SizedBox(
@@ -128,7 +127,13 @@ class LogInScreen extends StatelessWidget{
                       backgroundColor: Color(0xffe35627),
                       elevation: 0,
                     ),
-                    onPressed: () {print("Log In Pressed");},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
+                      );
+                    },
                   ),
                 ),
               ),
@@ -149,18 +154,17 @@ class LogInScreen extends StatelessWidget{
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {print("Switch View Pressed");},
-                    child: Text(
-                        " Sign Up",
+                    onTap: () {
+                      print("Switch View Pressed");
+                    },
+                    child: Text(" Sign Up",
                         textAlign: TextAlign.center,
                         textDirection: TextDirection.ltr,
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 14,
                             decoration: TextDecoration.underline,
-                            fontWeight: FontWeight.bold
-                        )
-                    ),
+                            fontWeight: FontWeight.bold)),
                   )
                 ],
               ),
@@ -176,32 +180,28 @@ class LogInScreen extends StatelessWidget{
                       height: 0.50,
                       decoration: BoxDecoration(
                         border: Border.all(color: Color(0xff526268)),
-                      )
-                  ),
+                      )),
                   SizedBox(
                       width: 128,
                       height: 31,
-                      child:Center(
+                      child: Center(
                           child: Text(
-                            "Or connect with",
-                            textAlign: TextAlign.center,
-                            textDirection: TextDirection.ltr,
-                            style: TextStyle(
-                              color: Color(0xff526268),
-                              fontSize: 14,
-                              fontFamily: "Open Sans",
-                              fontWeight: FontWeight.w300,
-                            ),
-                          )
-                      )
-                  ),
+                        "Or connect with",
+                        textAlign: TextAlign.center,
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(
+                          color: Color(0xff526268),
+                          fontSize: 14,
+                          fontFamily: "Open Sans",
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ))),
                   Container(
                       width: 126.50,
                       height: 0.50,
                       decoration: BoxDecoration(
                         border: Border.all(color: Color(0xff526268)),
-                      )
-                  )
+                      ))
                 ],
               ),
               Row(
@@ -211,16 +211,19 @@ class LogInScreen extends StatelessWidget{
                 textDirection: TextDirection.ltr,
                 children: [
                   GestureDetector(
-                      onTap: () {print("Facebook Login Pressed");},
+                      onTap: () {
+                        print("Facebook Login Pressed");
+                      },
                       child: ImageIcon(
                         AssetImage("assets/icons/ic_baseline-facebook.png"),
                         color: Color(0xff526268),
                         size: 24,
-                      )
-                  ),
+                      )),
                   SizedBox(width: 70),
                   GestureDetector(
-                    onTap: () {print("Google Login Pressed");},
+                    onTap: () {
+                      print("Google Login Pressed");
+                    },
                     child: ImageIcon(
                       AssetImage("assets/icons/ri_google-fill.png"),
                       color: Color(0xff526268),
@@ -229,18 +232,18 @@ class LogInScreen extends StatelessWidget{
                   ),
                   SizedBox(width: 70),
                   GestureDetector(
-                      onTap: () {print("Twitter Login Pressed");},
+                      onTap: () {
+                        print("Twitter Login Pressed");
+                      },
                       child: ImageIcon(
                         AssetImage("assets/icons/bi_twitter.png"),
                         color: Color(0xff526268),
                         size: 24,
-                      )
-                  )
+                      ))
                 ],
               )
             ],
           ),
-        )
-    );
+        ));
   }
 }

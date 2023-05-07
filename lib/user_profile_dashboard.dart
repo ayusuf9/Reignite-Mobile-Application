@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatelessWidget{
-  const SignUpScreen({super.key});
+class UserProfile extends StatelessWidget {
+  const UserProfile({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfffff6ef),
       body: SingleChildScrollView(
@@ -31,12 +31,9 @@ class SignUpScreen extends StatelessWidget{
                             backgroundColor: Color(0xff526268),
                             child: CircleAvatar(
                               backgroundImage: AssetImage(
-                                  'assets/icons/image placeholder.png'
-                              ),
+                                  'assets/icons/image placeholder.png'),
                               radius: 70,
-                            )
-                        )
-                    ),
+                            ))),
                     SizedBox(width: 15),
                     SizedBox(
                         height: 130,
@@ -68,17 +65,20 @@ class SignUpScreen extends StatelessWidget{
                                 textDirection: TextDirection.ltr,
                                 children: [
                                   ImageIcon(
-                                    AssetImage("assets/icons/social_issues/student.png"),
+                                    AssetImage(
+                                        "assets/icons/social_issues/student.png"),
                                     color: Color(0xff526268),
                                     size: 24,
                                   ),
                                   ImageIcon(
-                                    AssetImage("assets/icons/social_issues/environment icon.png"),
+                                    AssetImage(
+                                        "assets/icons/social_issues/environment icon.png"),
                                     color: Color(0xff526268),
                                     size: 24,
                                   ),
                                   ImageIcon(
-                                    AssetImage("assets/icons/social_issues/health icon.png"),
+                                    AssetImage(
+                                        "assets/icons/social_issues/health icon.png"),
                                     color: Color(0xff526268),
                                     size: 24,
                                   ),
@@ -100,8 +100,7 @@ class SignUpScreen extends StatelessWidget{
                               ),
                             )
                           ],
-                        )
-                    )
+                        ))
                   ],
                 ),
               ),
@@ -112,8 +111,7 @@ class SignUpScreen extends StatelessWidget{
                     height: 0,
                     decoration: BoxDecoration(
                       border: Border.all(color: Color(0xff526268)),
-                    )
-                ),
+                    )),
               ),
               Padding(
                   padding: EdgeInsets.only(left: 0, right: 15, top: 40),
@@ -197,7 +195,9 @@ class SignUpScreen extends StatelessWidget{
                                         color: Color(0xffe35627),
                                       ),
                                     ),
-                                    onPressed: () {print("Donate Pressed");},
+                                    onPressed: () {
+                                      print("Donate Pressed");
+                                    },
                                   ),
                                 ),
                               ],
@@ -216,8 +216,7 @@ class SignUpScreen extends StatelessWidget{
                         )
                       ],
                     ),
-                  )
-              ),
+                  )),
               Padding(
                 padding: EdgeInsets.only(top: 20),
                 child: Container(
@@ -225,8 +224,7 @@ class SignUpScreen extends StatelessWidget{
                     height: 0,
                     decoration: BoxDecoration(
                       border: Border.all(color: Color(0xff526268)),
-                    )
-                ),
+                    )),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 20),
@@ -283,8 +281,7 @@ class SignUpScreen extends StatelessWidget{
                                       ),
                                     ),
                                   ],
-                                )
-                            ),
+                                )),
                             SizedBox(width: 15),
                             Container(
                                 width: 217,
@@ -312,8 +309,7 @@ class SignUpScreen extends StatelessWidget{
                                       ),
                                     ),
                                   ],
-                                )
-                            ),
+                                )),
                             SizedBox(width: 15),
                             Container(
                                 width: 217,
@@ -341,8 +337,7 @@ class SignUpScreen extends StatelessWidget{
                                       ),
                                     ),
                                   ],
-                                )
-                            ),
+                                )),
                             SizedBox(width: 15),
                           ],
                         ),
@@ -354,39 +349,6 @@ class SignUpScreen extends StatelessWidget{
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xfffff6ef),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/icons/Search.png"),
-              color: Color(0xff526268),
-              size: 24,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/icons/Home.png"),
-              color: Color(0xff526268),
-              size: 24,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/icons/User_fill.png"),
-              color: Color(0xff526268),
-              size: 24,
-            ),
-            label: '',
-          ),
-        ],
-        currentIndex: 0,
-        selectedItemColor: Color(0xffe35627),
-        //onTap: ,
       ),
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 /// constant colors
-const kOrangeCOlor = Color(0xFFE35627);
+const kOrangeColor = Color(0xFFE35627);
 const kSlateColor = Color(0xFF526268);
-const kCreambackgroundColor = Color(0xFFFFF6EF);
+const kCreamBackgroundColor = Color(0xFFFFF6EF);
 const kDarkCreme = Color(0xFFFFE8D7);
 
 /// App Assets

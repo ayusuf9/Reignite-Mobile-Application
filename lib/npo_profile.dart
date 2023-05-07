@@ -1,41 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:reignite_social/assets.dart';
-import 'package:reignite_social/home_section.dart';
-import 'package:reignite_social/search_section.dart';
-import 'package:reignite_social/user_profile_dashboard.dart';
-import 'welcome_screen.dart';
+import 'assets.dart';
+import 'search_section.dart';
+import 'home_section.dart';
+import 'user_profile_dashboard.dart';
+import 'result_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class NPOProfile extends StatefulWidget {
+  const NPOProfile({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const WelcomeScreen(),
-    );
-  }
+  State<NPOProfile> createState() => _NPOProfileState();
 }
 
-/////////////
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int selectedIndex = 1;
+class _NPOProfileState extends State<NPOProfile> {
+  bool firstLook = true;
+  int selectedIndex = 2;
   changeIndex(int newIndex) {
     if (newIndex != selectedIndex) {
       setState(() {
@@ -47,7 +26,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCreamBackgroundColor,
       bottomNavigationBar: SafeArea(
         child: SizedBox(
           height: 80,
@@ -67,6 +45,7 @@ class _HomePageState extends State<HomePage> {
                   selectedItemColor: kOrangeColor,
                   unselectedItemColor: kSlateColor,
                   onTap: (value) {
+                    firstLook = false;
                     changeIndex(value);
                   },
                   currentIndex: selectedIndex,
@@ -105,14 +84,29 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: IndexedStack(
-        index: selectedIndex,
-        children: const [
-          SearchSection(),
-          HomeSection(),
-          UserProfile(),
-        ],
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black,
+        bottomOpacity: 0.0,
+        elevation: 0.0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
+      backgroundColor: const Color(0xfffff6ef),
+      body: firstLook
+          ? const ResultScreen()
+          : IndexedStack(
+              index: selectedIndex,
+              children: const [
+                SearchSection(),
+                HomeSection(),
+                UserProfile(),
+              ],
+            ),
     );
   }
 }
