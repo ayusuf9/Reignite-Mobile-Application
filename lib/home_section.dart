@@ -28,6 +28,7 @@ class _HomeSectionState extends State<HomeSection> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: kCreamBackgroundColor,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -41,7 +42,7 @@ class _HomeSectionState extends State<HomeSection> {
           bottom: TabBar(
             indicatorPadding:
                 const EdgeInsets.symmetric(horizontal: 40, vertical: 8),
-            indicatorColor: kOrangeCOlor,
+            indicatorColor: kOrangeColor,
             onTap: (value) {
               toggleSection(value);
             },
@@ -51,7 +52,7 @@ class _HomeSectionState extends State<HomeSection> {
                   'NPO Updates',
                   textScaleFactor: 1.2,
                   style: TextStyle(
-                    color: section == 0 ? kOrangeCOlor : kSlateColor,
+                    color: section == 0 ? kOrangeColor : kSlateColor,
                     fontWeight:
                         section == 0 ? FontWeight.w500 : FontWeight.w400,
                   ),
@@ -62,7 +63,7 @@ class _HomeSectionState extends State<HomeSection> {
                   'Friends',
                   textScaleFactor: 1.2,
                   style: TextStyle(
-                    color: section == 1 ? kOrangeCOlor : kSlateColor,
+                    color: section == 1 ? kOrangeColor : kSlateColor,
                     fontWeight:
                         section == 1 ? FontWeight.w500 : FontWeight.w400,
                   ),
@@ -236,7 +237,7 @@ class FeedPost extends StatelessWidget {
                           margin: const EdgeInsets.symmetric(horizontal: 7),
                           child: const ImageIcon(
                             AssetImage(reactionLikeActive),
-                            color: kOrangeCOlor,
+                            color: kOrangeColor,
                             size: 35,
                           ),
                         )
@@ -253,7 +254,7 @@ class FeedPost extends StatelessWidget {
                           margin: const EdgeInsets.symmetric(horizontal: 7),
                           child: const ImageIcon(
                             AssetImage(reactionSupportActive),
-                            color: kOrangeCOlor,
+                            color: kOrangeColor,
                             size: 35,
                           ),
                         )
@@ -270,7 +271,7 @@ class FeedPost extends StatelessWidget {
                           margin: const EdgeInsets.symmetric(horizontal: 7),
                           child: const ImageIcon(
                             AssetImage(reactionClapActive),
-                            color: kOrangeCOlor,
+                            color: kOrangeColor,
                             size: 35,
                           ),
                         )

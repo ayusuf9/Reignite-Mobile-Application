@@ -13,7 +13,7 @@ class SearchSection extends StatelessWidget {
     return DefaultTabController(
       length: searchTiles.length,
       child: Scaffold(
-        backgroundColor: kCreambackgroundColor,
+        backgroundColor: kCreamBackgroundColor,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -43,19 +43,19 @@ class SearchSection extends StatelessWidget {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   borderSide:
-                      BorderSide(width: 2, color: kSlateColor), //<-- SEE HERE
+                      BorderSide(width: 1, color: kSlateColor), //<-- SEE HERE
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
 
                   borderSide:
-                      BorderSide(width: 2, color: kOrangeCOlor), //<-- SEE HERE
+                      BorderSide(width: 2, color: kOrangeColor), //<-- SEE HERE
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
 
                   borderSide:
-                      BorderSide(width: 2, color: kSlateColor), //<-- SEE HERE
+                      BorderSide(width: 1, color: kSlateColor), //<-- SEE HERE
                 ),
                 isDense: true, // Added this
                 contentPadding: EdgeInsets.all(10), //
@@ -65,7 +65,7 @@ class SearchSection extends StatelessWidget {
           bottom: TabBar(
               isScrollable: true,
               labelPadding: EdgeInsetsDirectional.zero,
-              indicatorColor: kCreambackgroundColor,
+              indicatorColor: kCreamBackgroundColor,
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 1),
               tabs: searchTiles
                   .map((e) => Container(
@@ -74,7 +74,7 @@ class SearchSection extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 7, horizontal: 5),
                         decoration: BoxDecoration(
-                            border: Border.all(color: kOrangeCOlor, width: 1.5),
+                            border: Border.all(color: kOrangeColor, width: 1.5),
                             borderRadius: const BorderRadius.all(
                               Radius.circular(12),
                             ),
@@ -83,12 +83,12 @@ class SearchSection extends StatelessWidget {
                           children: [
                             ImageIcon(
                               AssetImage(getCtegoryIcon(e.image)),
-                              color: kOrangeCOlor,
+                              color: kOrangeColor,
                             ),
                             Text(
                               " ${e.title}",
                               style: const TextStyle(
-                                color: kOrangeCOlor,
+                                color: kOrangeColor,
                               ),
                             ),
                           ],
@@ -103,7 +103,7 @@ class SearchSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Divider(
-                  thickness: 2,
+                  thickness: 0.5,
                   color: kSlateColor,
                 ),
                 const SizedBox(height: 10),
