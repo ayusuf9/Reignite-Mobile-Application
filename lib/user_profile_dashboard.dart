@@ -8,8 +8,9 @@ class UserProfile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xfffff6ef),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Container(
-          height: 775,
+          height: 1100,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -31,7 +32,7 @@ class UserProfile extends StatelessWidget {
                             backgroundColor: Color(0xff526268),
                             child: CircleAvatar(
                               backgroundImage: AssetImage(
-                                  'assets/icons/image placeholder.png'),
+                                  'assets/berkeley campanille.jpg'),
                               radius: 70,
                             ))),
                     SizedBox(width: 15),
@@ -47,7 +48,7 @@ class UserProfile extends StatelessWidget {
                               width: 160,
                               height: 52,
                               child: Text(
-                                "Your Name Here",
+                                "Berkeley Student",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 24,
@@ -175,7 +176,7 @@ class UserProfile extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 181,
+                                  width: 130,
                                   height: 34,
                                   child: ElevatedButton(
                                     child: Text(
@@ -206,10 +207,8 @@ class UserProfile extends StatelessWidget {
                             SizedBox(
                               height: 125,
                               width: 125,
-                              child: ImageIcon(
-                                AssetImage("assets/icons/Figpie.png"),
-                                color: Color(0xffffe8d6),
-                                size: 40,
+                              child: Image(
+                                image: AssetImage("assets/icons/Figpie.png")
                               ),
                             )
                           ],
@@ -254,6 +253,7 @@ class UserProfile extends StatelessWidget {
                         height: 198,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
+                          physics: const BouncingScrollPhysics(),
                           children: <Widget>[
                             Container(
                                 width: 217,
@@ -271,7 +271,10 @@ class UserProfile extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SizedBox(height: 108),
+                                    Image(
+                                        image: AssetImage("assets/icons/Heart2heart profile image.png")
+                                    ),
+                                    Padding(padding: EdgeInsets.only(top: 2)),
                                     Container(
                                       width: 217,
                                       height: 87,
@@ -279,6 +282,41 @@ class UserProfile extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(5),
                                         color: Color(0xffffe8d6),
                                       ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.only(left:10, top: 8),
+                                              child: Text(
+                                                "Syrian Refugee Camp",
+                                                textAlign: TextAlign.left,
+                                                textDirection: TextDirection.ltr,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontFamily: "Open Sans",
+                                                  fontWeight: FontWeight.w300,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(left:10, top: 30),
+                                              child: Text(
+                                                "\$18 Donated",
+                                                textAlign: TextAlign.left,
+                                                textDirection: TextDirection.ltr,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 15,
+                                                  fontFamily: "Open Sans",
+                                                  fontWeight: FontWeight.w800,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        )
                                     ),
                                   ],
                                 )),
@@ -299,7 +337,10 @@ class UserProfile extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SizedBox(height: 108),
+                                    Image(
+                                        image: AssetImage("assets/icons/BLM.png")
+                                    ),
+                                    Padding(padding: EdgeInsets.only(top: 5)),
                                     Container(
                                       width: 217,
                                       height: 87,
@@ -307,6 +348,155 @@ class UserProfile extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(5),
                                         color: Color(0xffffe8d6),
                                       ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.only(left:10, top: 8),
+                                              child: Text(
+                                                "Monthly Portfolio Reviews",
+                                                textAlign: TextAlign.left,
+                                                textDirection: TextDirection.ltr,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontFamily: "Open Sans",
+                                                  fontWeight: FontWeight.w300,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(left:10, top: 30),
+                                              child: Text(
+                                                "\$10 Donated",
+                                                textAlign: TextAlign.left,
+                                                textDirection: TextDirection.ltr,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 15,
+                                                  fontFamily: "Open Sans",
+                                                  fontWeight: FontWeight.w800,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                    ),
+                                  ],
+                                )),
+                            SizedBox(width: 15),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 60),
+                child: Container(
+                    width: 390,
+                    height: 0,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xff526268)),
+                    )
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 350,
+                      height: 39,
+                      child: Text(
+                        "Recent Donations",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 24,
+                          fontFamily: "Open Sans",
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 30),
+                      child: Container(
+                        width: 390,
+                        height: 198,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          physics: const BouncingScrollPhysics(),
+                          children: <Widget>[
+                            Container(
+                                width: 217,
+                                height: 197,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                    color: Color(0xff526268),
+                                    width: 1,
+                                  ),
+                                  color: Colors.white,
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(padding: EdgeInsets.only(top:25)),
+                                    Image(
+                                        image: AssetImage("assets/icons/Hands-On-Bay-Area.png")
+                                    ),
+                                    Padding(padding: EdgeInsets.only(top:25)),
+                                    Container(
+                                      width: 217,
+                                      height: 87,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: Color(0xffffe8d6),
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(left:10, top: 8),
+                                            child: Text(
+                                              "Earth Month Project",
+                                              textAlign: TextAlign.left,
+                                              textDirection: TextDirection.ltr,
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(left:10, top: 30),
+                                            child: Text(
+                                              "\$18 Donated",
+                                              textAlign: TextAlign.left,
+                                              textDirection: TextDirection.ltr,
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w800,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
                                     ),
                                   ],
                                 )),
@@ -327,7 +517,9 @@ class UserProfile extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SizedBox(height: 108),
+                                    Image(
+                                        image: AssetImage("assets/icons/channels4_profile 1.png")
+                                    ),
                                     Container(
                                       width: 217,
                                       height: 87,
@@ -335,6 +527,41 @@ class UserProfile extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(5),
                                         color: Color(0xffffe8d6),
                                       ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsets.only(left:10, top: 8),
+                                              child: Text(
+                                                "Save The Children - Dec...",
+                                                textAlign: TextAlign.left,
+                                                textDirection: TextDirection.ltr,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontFamily: "Open Sans",
+                                                  fontWeight: FontWeight.w300,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(left:10, top: 30),
+                                              child: Text(
+                                                "\$1 Donated",
+                                                textAlign: TextAlign.left,
+                                                textDirection: TextDirection.ltr,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 15,
+                                                  fontFamily: "Open Sans",
+                                                  fontWeight: FontWeight.w800,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        )
                                     ),
                                   ],
                                 )),
